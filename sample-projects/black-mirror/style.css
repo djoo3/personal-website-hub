@@ -1,0 +1,481 @@
+/*Daniel Joo*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color: black;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/************************************************************/
+
+header {
+    position: relative;
+    font-size: 10vw;
+    font-weight: bold;
+    color: white;
+    bottom: 1.2em;
+    left: 5vw;
+}
+
+article {
+    grid-area: article;
+    color: white;
+}
+
+article h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0.5em 0.75em;
+}
+
+article p {
+    font-size: 15px;
+    margin: 2em 2em 0 2em;
+    line-height: 1.5em;
+}
+
+aside {
+    grid-area: aside;
+}
+
+aside h2 {
+    font-size: 50px;
+    color: #7bcbff;
+    margin: 1em 0.75em 0.5em 0.75em;
+    font-weight: bold;
+}
+
+aside a {
+    font-size: 20px;
+    line-height: 3em;
+    text-decoration: none;
+    color: #cce8ff;
+    margin: 2em 2em 0 2em;
+    transition: text-shadow 1.8s;
+    font-weight: bold;
+}
+
+#word-mirror {
+    position: relative;
+    color: red;
+    top: 0.4em;
+}
+
+#trailer-links > h1 {
+    position: relative;
+    font-size: 40px;
+    color: aliceblue;
+    text-align: center;
+    letter-spacing: 7vw;
+    left: 3vw;
+}
+
+#trailer-container {
+    position: relative;
+    top: 12em;
+}
+
+#intro-video {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+}
+
+#frame {
+    width: 100%;
+    margin-top: -7%;
+}
+
+#trailer-links ul {
+    display: flex;
+    justify-content: center;
+}
+
+#trailer-links li {
+    margin: 25% 10% 15% 10%;
+}
+
+#trailer-links a {
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+    transition: text-shadow 1.8s;
+}
+
+aside a:hover, #trailer-links a:hover {
+    text-shadow: 0 0 8px rgba(137, 213, 240, 1), 0 0 15px rgba(137, 213, 240, 1), 0 0 28px rgba(137, 213, 240, 1);
+    transition: text-shadow 0.3s;
+}
+
+#grid-container {
+    position: relative;
+    display: grid;
+    width: 100%;
+    background-color: black;
+    margin: 24em 0;
+    grid-template-areas: "aside article";
+    grid-template-columns: 30% 70%;
+}
+
+#video-grid-container {
+    position: relative;
+}
+
+#related-video-list {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "h3 h3" "video1 video2" "video3 video4" "video5 video6" "video7 video8";
+    grid-template: 10% repeat(4, 22.5%) / 50% 50%;
+    background: linear-gradient(black, white);
+}
+
+h3 {
+    grid-area: h3;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+#video1 iframe {
+    grid-area: video1;
+}
+
+#video2 iframe {
+    grid-area: video2;
+}
+
+#video3 iframe {
+    grid-area: video3;
+}
+
+#video4 iframe {
+    grid-area: video4;
+}
+
+#video5 iframe {
+    grid-area: video5;
+}
+
+#video6 iframe {
+    grid-area: video6;
+}
+
+#video7 iframe {
+    grid-area: video7;
+}
+
+#video8 iframe {
+    grid-area: video8;
+}
+
+#related-video-list li {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+iframe {
+    border: 0.125rem solid transparent;
+}
+
+#end {
+    height: 100vh;
+    background-color: white;
+}
+
+h4 {
+    position: relative;
+    display: inline-block;
+    top: 45vh;
+    left: 13vw;
+    font-size: 4vw;
+    padding: 0.3em;
+    border: 1px solid #1051ff;
+    border-radius: 5px;
+    background-color: #298aff;
+}
+
+h4 a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+h4:hover {
+    /*COOL CSS FEATURE!*/
+    background: repeating-radial-gradient(#298aff, #298aff 5px, white 5px, white 10px);
+}
+
+#print-only-url {
+    display: none;
+}
+
+/*************************************************MEDIA QUERIES*************************************************/
+
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+
+    #related-video-list {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-areas: "h3" "video1" "video2" "video3" "video4" "video5" "video6" "video7" "video8";
+        grid-template: 4% repeat(8, 12%) / 100%;
+        background: linear-gradient(black, white);
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 749px) {
+
+    article h1, aside h2, aside li {
+        text-align: center;
+    }
+
+    #grid-container {
+        position: relative;
+        display: grid;
+        width: 100%;
+        background-color: black;
+        margin: 24em 0;
+        grid-template-areas: "article" "aside";
+        grid-template-columns: 100%;
+    }
+
+    #related-video-list {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-areas: "h3" "video1" "video2" "video3" "video4" "video5" "video6" "video7" "video8";
+        grid-template: 4% repeat(8, 12%) / 100%;
+        background: linear-gradient(black, white);
+    }
+
+}
+
+@media screen and (max-width: 499px) {
+
+    #trailer-links > h1 {
+        font-size: 25px;
+        letter-spacing: 4vw;
+    }
+
+    #trailer-links a {
+        font-size: 20px;
+    }
+
+    article h1, aside h2, aside li {
+        text-align: center;
+    }
+
+    article h1 {
+        font-size: 25px;
+    }
+
+    article p {
+        font-size: 14px;
+    }
+
+    aside h2, h3 {
+        font-size: 20px
+    }
+
+    aside li {
+        font-size: 17px;
+    }
+
+    #grid-container {
+        position: relative;
+        display: grid;
+        width: 100%;
+        background-color: black;
+        margin: 24em 0;
+        grid-template-areas: "article" "aside";
+        grid-template-columns: 100%;
+    }
+
+    #related-video-list {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-areas: "h3" "video1" "video2" "video3" "video4" "video5" "video6" "video7" "video8";
+        grid-template: 4% repeat(8, 12%) / 100%;
+        background: linear-gradient(black, white);
+    }
+
+}
+
+@media print {
+
+    #intro-video, #video-grid-container, #end {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    header {
+        font-size: 10vw;
+        color: black;
+        bottom: -1em;
+        left: 5vw;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+        color: black;
+        text-align: left;
+    }
+
+    article, #video-grid-container {
+        page-break-before: always;
+    }
+
+    a[href^="http"]:after {
+        content: " URL( " attr(href) ") ";
+    }
+
+    #trailer-links > h1 {
+        font-size: 25px;
+        text-align: left;
+        letter-spacing: 1em;
+        color: black;
+    }
+
+    #trailer-links ul {
+        display: inline;
+    }
+
+    #trailer-links li {
+        margin: 1em;
+    }
+
+    #trailer-links a {
+        color: black;
+    }
+
+    #word-mirror {
+        position: relative;
+        color: red;
+        top: 0;
+    }
+
+    #grid-container {
+        position: relative;
+        display: grid;
+        width: 100%;
+        margin: 24em 0;
+        grid-template-areas: "aside" "article";
+        grid-template-columns: 100%;
+    }
+
+    article h1 {
+        color: black;
+    }
+
+    article p {
+        color: black;
+        font-size: 16px;
+    }
+
+    #print-only-url {
+        display: inline;
+    }
+
+    #print-only-url li {
+        font-size: 15px;
+        line-height: 1.3em;
+        color: black;
+    }
+
+    #print-only-url h4 {
+        position: relative;
+        margin: 0;
+        font-size: 15px;
+        color: black;
+        border: none;
+        top: 0;
+        left: 0;
+    }
+
+    #print-only-url h4 a {
+        color: black;
+    }
+
+    #grid-container, #trailer-container {
+        background: white;
+    }
+}
+
+/*****************************************************FONTS*****************************************************/
+
+.helvetica {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+/*NEW CSS FEATURE: LINKING WEBFONTS*/
+.roboto {
+    font-family: "Roboto", "Times", sans-serif;
+}

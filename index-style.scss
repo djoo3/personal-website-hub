@@ -1005,65 +1005,89 @@ body {
 
   /*PROJECTS CONTENT STYING*/
   #projects-content {
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: $blue-1;
 
     h1 {
-      display: inline-block;
-      margin-top: 10vh;
+      margin-top: max(10vh, 60px);
+      margin-left: auto;
+      margin-right: auto;
       font: {
         family: $font-plex-sans;
-        size: 75px;
+        size: 60px;
       }
-      text-align: center;
       color: #eefcff;
     }
-
+  
     #project-container {
+      margin: 40px auto 0 auto;
       position: relative;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 70vw;
       flex-wrap: wrap;
-      margin-bottom: 30px;
-
+      padding-bottom: 80px;
+  
       .project-node {
-        margin: 1.5vw 1.5vw 1.5vw 1.5vw;
-        //min-width: 20vw;
-        width: 380px;
-        max-height: 220px;
+        margin: 1.5vw;
+        min-width: 20vw;
+        width: 280px;
+        max-height: 180px;
         opacity: 0;
-
+  
         a {
           text-decoration: none;
           &:hover {
             cursor: pointer;
             text-decoration: none;
           }
-
-          img {
+  
+          .project-box {
             width: 100%;
-            height: 220px;
-            border-radius: 5px;
-          }
+            height: 180px;
+            border: solid #eefcff;
+            border-width: 2px;
 
-          .project-description {
-            position: relative;
-            bottom: 223px;
-            max-width: 380px;
-            background-color: rgba(12, 52, 129, 0.7);
-            border-top-right-radius: 5px;
-            border-top-left-radius: 5px;
-            opacity: 0;
             h1 {
               display: inline-block;
               font: {
                 family: $font-plex-mono;
-                size: 28px;
+                size: 18px;
               }
               margin: 10px 10px 0 10px;
               text-align: left;
               color: #eefcff;
             }
+
+            .project-attributes {
+              display: flex;
+              flex-wrap: wrap;
+              margin: 5px;
+              li {
+                margin: 5px 5px;
+                padding: 5px 15px;
+                border-radius: 15px;
+                background-color: #eefcff;
+                color: $blue-1;
+                flex-wrap: nowrap;
+                font: {
+                  size: 11px;
+                  family: $font-plex-sans;
+                }
+              }
+
+            }
+          }
+  
+          .project-description {
+            position: relative;
+            bottom: 182px;
+            left: 2px;
+            max-width: 280px;
+            height: 180px;
+            background-color: rgba(12, 52, 129, 0.7);
+            opacity: 0;
+            
             p {
               display: inline-block;
               font: {

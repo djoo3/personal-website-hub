@@ -900,28 +900,31 @@ body {
   }
 }
 #resume-container #projects-content {
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: #7184ab;
 }
 #resume-container #projects-content h1 {
-  display: inline-block;
-  margin-top: 10vh;
+  margin-top: max(10vh, 60px);
+  margin-left: auto;
+  margin-right: auto;
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 75px;
-  text-align: center;
+  font-size: 60px;
   color: #eefcff;
 }
 #resume-container #projects-content #project-container {
+  margin: 40px auto 0 auto;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 70vw;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  padding-bottom: 80px;
 }
 #resume-container #projects-content #project-container .project-node {
-  margin: 1.5vw 1.5vw 1.5vw 1.5vw;
-  width: 380px;
-  max-height: 220px;
+  margin: 1.5vw;
+  min-width: 20vw;
+  width: 280px;
+  max-height: 180px;
   opacity: 0;
 }
 #resume-container #projects-content #project-container .project-node a {
@@ -931,27 +934,43 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
-#resume-container #projects-content #project-container .project-node a img {
+#resume-container #projects-content #project-container .project-node a .project-box {
   width: 100%;
-  height: 220px;
-  border-radius: 5px;
+  height: 180px;
+  border: solid #eefcff;
+  border-width: 2px;
 }
-#resume-container #projects-content #project-container .project-node a .project-description {
-  position: relative;
-  bottom: 223px;
-  max-width: 380px;
-  background-color: rgba(12, 52, 129, 0.7);
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  opacity: 0;
-}
-#resume-container #projects-content #project-container .project-node a .project-description h1 {
+#resume-container #projects-content #project-container .project-node a .project-box h1 {
   display: inline-block;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 28px;
+  font-size: 18px;
   margin: 10px 10px 0 10px;
   text-align: left;
   color: #eefcff;
+}
+#resume-container #projects-content #project-container .project-node a .project-box .project-attributes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+#resume-container #projects-content #project-container .project-node a .project-box .project-attributes li {
+  margin: 5px 5px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  background-color: #eefcff;
+  color: #7184ab;
+  flex-wrap: nowrap;
+  font-size: 11px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+#resume-container #projects-content #project-container .project-node a .project-description {
+  position: relative;
+  bottom: 182px;
+  left: 2px;
+  max-width: 280px;
+  height: 180px;
+  background-color: rgba(12, 52, 129, 0.7);
+  opacity: 0;
 }
 #resume-container #projects-content #project-container .project-node a .project-description p {
   display: inline-block;
